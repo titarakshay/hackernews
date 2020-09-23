@@ -1,0 +1,251 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* common css */
+.flex {
+  display: flex;
+}
+/* custom css */
+
+.header-div {
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.6rem;
+  background-color: #ec6333;
+}
+
+.header-div h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.heading-div {
+  justify-content: flex-start;
+  align-items: center;
+}
+.heading-div button {
+  margin: 0 0.6rem;
+  padding: 0.2rem 0.4rem;
+  font-weight: 900;
+  font-size: 1rem;
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+}
+.heading-div h1 {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+.nav-div {
+  margin-left: 1rem;
+}
+.nav-div li {
+  margin-left: 0.6rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+/* news-section css */
+.news-section {
+  padding: 1.5rem;
+  background-color: #f6f6ef;
+}
+.news-div {
+  justify-content: flex-start;
+  margin: 1rem 0;
+}
+.news-div h6 {
+  color: #9c9c9c;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.news-div h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.news-div span {
+  color: #9c9c9c;
+  font-size: 1.2rem;
+  margin-left: 0.4rem;
+}
+.news-div h5 {
+  color: #9c9c9c;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.news-detail-div {
+  margin-left: 0.5rem;
+}
+.news-div .fas {
+  color: #9c9c9c;
+  margin: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.media-menu-div {
+  display: none;
+}
+/* media queries css */
+
+@media screen and (max-width: 768px) {
+  .nav-div,
+  .login-div {
+    display: none;
+  }
+  .media-menu-div {
+    display: block;
+  }
+  .media-menu-div input {
+    visibility: hidden;
+  }
+  .media-nav-links {
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 3rem;
+    right: 0rem;
+    left: 0rem;
+    background-color: #ec6333;
+    /* padding: 1rem; */
+    font-size: 1.5rem;
+    font-weight: 500;
+    z-index: 1;
+  }
+  .media-nav-links li {
+    margin: 1rem 0;
+  }
+  #toggle:checked ~ .media-nav-links {
+    display: block;
+  }
+}
