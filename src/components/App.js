@@ -7,7 +7,7 @@ export default class App extends React.Component {
     newsList: [],
   };
   componentDidMount() {
-    let url = "http://hn.algolia.com/api/v1/search?tags=front_page";
+    let url = "https://hn.algolia.com/api/v1/search?tags=front_page";
     fetch(url)
       .then((res) => res.json())
       .then((data) => this.setState({ newsList: data.hits }))
