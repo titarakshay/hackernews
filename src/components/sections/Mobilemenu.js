@@ -3,7 +3,7 @@ import React from "react";
 export default function Mobilemenu(props) {
   return (
     <div className="media-menu-div">
-      <label className="hamburger" for="toggle">
+      <label className="hamburger" htmlFor="toggle">
         &#9776;
       </label>
       <input type="checkbox" name="" id="toggle" className="toggle" />

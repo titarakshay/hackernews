@@ -15,7 +15,7 @@ export default function NewsSection(props) {
         let data = localStorage.getItem(i);
         localStorage.setItem(i, Number(data));
         return (
-          <div className="flex news-div">
+          <div className="flex news-div" key={i}>
             <div className="flex block">
               <div className="align-right">
                 <h6>{i + 1}. </h6>

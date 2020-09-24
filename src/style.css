@@ -149,6 +149,7 @@ table {
   position: fixed;
   z-index: 1;
   width: 90%;
+  cursor: pointer;
 }
 
 .header-div h4 {
@@ -177,6 +178,7 @@ table {
 }
 .nav-div li {
   margin-left: 0.6rem;
+
   font-size: 1.3rem;
   font-weight: 500;
 }
@@ -239,6 +241,12 @@ table {
 }
 .media-menu-div {
   display: none;
+}
+.error-div {
+  position: absolute;
+  top: 5rem;
+  font-size: 1.8rem;
+  color: red;
 }
 /* media queries css */
 
