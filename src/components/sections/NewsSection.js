@@ -16,14 +16,18 @@ export default function NewsSection(props) {
         localStorage.setItem(i, Number(data));
         return (
           <div className="flex news-div">
-            <h6>{i + 1}. </h6>
-            <i
-              className="upvote-btn fas fa-sort-up"
-              onClick={() => handleClick(i)}
-            >
-              {localStorage.getItem(i)}
-            </i>
-
+            <div className="flex block">
+              <div className="align-right">
+                <h6>{i + 1}. </h6>
+              </div>
+              <div className="upvote-div">
+                <i
+                  className="upvote-btn fas fa-sort-up"
+                  onClick={() => handleClick(i)}
+                ></i>
+                <p>{localStorage.getItem(i)}</p>
+              </div>
+            </div>
             <div className="news-detail-div">
               <h2>
                 {news.title} <span>({hostname})</span>{" "}

@@ -20,14 +20,14 @@ export default class App extends React.Component {
   render() {
     let { newsList } = this.state;
     return (
-      <>
+      <div className="container">
         <Header />
         {newsList.length ? (
           <NewsSection List={newsList} handleChange={this.handleChange} />
         ) : (
           "Loading..."
         )}
-      </>
+      </div>
     );
   }
 }

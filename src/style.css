@@ -137,12 +137,18 @@ table {
   display: flex;
 }
 /* custom css */
-
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
 .header-div {
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0.6rem;
+  padding: 0.5rem 1.5rem;
   background-color: #ec6333;
+  position: fixed;
+  z-index: 1;
+  width: 90%;
 }
 
 .header-div h4 {
@@ -176,11 +182,16 @@ table {
 }
 
 /* news-section css */
+.align-right {
+  width: 1.9rem;
+  text-align: right;
+}
 .news-section {
-  padding: 1.5rem;
+  padding: 3rem 1.5rem;
   background-color: #f6f6ef;
 }
 .news-div {
+  position: relative;
   justify-content: flex-start;
   margin: 1rem 0;
 }
@@ -192,6 +203,7 @@ table {
 .news-div h2 {
   font-size: 1.5rem;
   margin-bottom: 0.4rem;
+  color: rgb(17, 0, 0);
 }
 
 .news-div span {
@@ -200,28 +212,56 @@ table {
   margin-left: 0.4rem;
 }
 .news-div h5 {
-  color: #9c9c9c;
+  color: #777777;
   font-size: 1.1rem;
   font-weight: 500;
 }
 .news-detail-div {
-  margin-left: 0.1rem;
+  margin-left: 1.2rem;
 }
 .news-div .fas {
   color: #9c9c9c;
-  margin: 0.5rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  padding: 0;
+  margin: 0;
 }
 
+.upvote-div {
+  display: block;
+  margin-left: 1rem;
+}
+.upvote-div p {
+  line-height: 0;
+  padding-left: 0.2rem;
+  color: #ec6333;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
 .media-menu-div {
   display: none;
 }
 /* media queries css */
 
 @media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+  .header-div {
+    width: 100%;
+  }
   .nav-div,
   .login-div {
     display: none;
+  }
+  .block {
+    display: block;
+    margin: 0;
+  }
+  .upvote-div {
+    margin: 1rem 0;
+  }
+  .upvote-div p {
+    padding: 0.11rem;
   }
   .media-menu-div {
     display: block;
@@ -247,5 +287,21 @@ table {
   }
   #toggle:checked ~ .media-nav-links {
     display: block;
+  }
+  /* news section */
+  .news-div {
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 0.8rem;
+  }
+  .news-div h5 {
+    margin-top: 0.7rem;
+  }
+  .align-right {
+    width: 1rem;
+    text-align: center;
+  }
+  .hamburger {
+    font-size: 1.5rem;
+    padding-top: 1.5rem;
   }
 }
